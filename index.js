@@ -1,7 +1,7 @@
 //1.
 function maxOfTwoNumbers(a, b) {
   console.log(a > b ? a : b);
-  return a > b ? a : b;
+  return a > b ? a : b; 
 }
 
 maxOfTwoNumbers(8, 5);
@@ -18,8 +18,9 @@ let maxOfThree = (...args) => {
 
 maxOfThree(1 ,4 , 3, 99, 1, 1099);
 console.log("---End of 2---");
+
 //3.
-function isCharAVowel(param) {
+/*function isCharAVowel(param) {
   switch(param) {
     case "a":
     case "o":
@@ -33,9 +34,14 @@ function isCharAVowel(param) {
       console.log(param + "  is not a vowel");
       return false;
   }
+}*/
+
+let isCharAVowel = (param) => {
+  let vowels = ["a", "i", "o", "u", "e"]
+  vowels.includes(param.toLowerCase()) ? console.log(param + " is a vowel") : console.log(param + " it is not a vowel")
 }
 
-isCharAVowel("a");
+isCharAVowel("A");
 isCharAVowel("b");
 console.log("---End of 3---");
 
@@ -53,10 +59,11 @@ sumArray([2, 6, 9]);
 console.log("---End of 4---");
 
 //5.
-function multiplyArray(arr) {
+function multiplyArray(unkown) {
   let total = 1;
-  for(let i = 0; i < arr.length; i++) {
-    total *= arr[i];
+  
+  for(let i = 0; i < unkown.length; i++) {
+    total *= unkown[i];
   }
   console.log(total);
   return total;
@@ -110,4 +117,6 @@ function stringsLongerThan(arr, num) {
 }
 
 stringsLongerThan(["one", "hundred", "thousand", "fifillion"], 7);
-console.log("---End of 8---");
+console.log("---End of 9---");
+
+
